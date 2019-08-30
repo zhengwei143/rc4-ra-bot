@@ -52,7 +52,7 @@ ra_masterlist = {
 # str id : (name, tele_id, house, state) where state can be any of the 4: ['leave','present', 'unanswered', 'absent']
 
 
-leave_file_path = '/home/zhengwei/tanzh/repos/rc4-ra-bot/RAs\' Leave Application Form.pdf'
+leave_file_path = '/home/ubuntu/rc4-ra-bot/RAs\' Leave Application Form.pdf'
 
 duty_filename = 'RA Duty and Leave Schedule_201819S1.xlsx'
 
