@@ -101,7 +101,7 @@ def whosduty(msg):
         bot.sendMessage(chat_id, 'Hola mi amigo! {},\nYou have {} duty today ({})'.format(name, shift,todate))
 def applyleave(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
-    file_path = '/home/pi/Desktop/Nextcloud_sync/Rasp_pi_sync_folder/Telebots/RA-Helper-bot/RAs\' Leave Application Form.pdf'
+    file_path = leave_file_path
     document= open(file_path,'rb')
     note ='Hello people, below are some administrative matters regarding leave applications.\n'\
               'To apply for leave,\n'\
@@ -251,7 +251,8 @@ MessageLoop(bot, {'chat': on_chat_message,
 
 print('Listening ...')
 
-
+while True:
+    ostime.sleep(10)
 
 '''
 def test():

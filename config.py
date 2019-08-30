@@ -3,7 +3,6 @@ import csv
 #Configuration file for RA Helper bot
 
 ra_token = '609175111:AAHtto1acCS7T1kBMw_-aONeKrntnRgSW7k'
-# ra_token = '901297398:AAH64M9uzAmr5dzkv9MNcd8UsdRe3wOhZ_g'
 dev_token = '418919776:AAFtP-yRuriRMPZp7jZp-MIkmfjv668nFGI'
 
 '''
@@ -15,7 +14,7 @@ ra_list = {'Abdullah': (88985965, 'Ursa'), 'Anh': (215588173, 'Aquila'), 'Claudi
            'Brian': (209469386, 'Draco'),'Reuben': (111493999, 'Leo')
            }
 '''
-
+'''
 ra_masterlist = {'88985965': ('Abdullah', 88985965, 'Ursa', 'unanswered'), '215588173': ('Anh', 215588173, 'Aquila','unanswered'),
                '209469386': ('Brian', 209469386, 'Draco', 'unanswered'), '174955135': ('Hafiz', 174955135, 'Noctua','unanswered'),
                '228914289': ('Jingjing', 228914289, 'Noctua','unanswered'), '128731381': ('Joshua',128731381, 'Draco','unanswered'),
@@ -25,11 +24,35 @@ ra_masterlist = {'88985965': ('Abdullah', 88985965, 'Ursa', 'unanswered'), '2155
                '114835155': ('Ying Tze', 114835155, 'Noctua','unanswered'), '139286512': ('Zicen', 139286512, 'Leo','unanswered'),
                '297090900': ('Claudia', 297090900, 'Ursa', 'unanswered'), '111493999': ('Reuben', 111493999, 'Leo','unanswered')
                }
+'''
+
+# AY2019/20 RA List
+ra_masterlist = {
+    '209469386': ('Brian', 209469386, 'Leo', 'unanswered'),
+    '231696047': ('Gerald', 231696047, 'Leo', 'unanswered'),
+    '430632313': ('Hui Kun', 430632313, 'Leo', 'unanswered'),
+    '261886719': ('Prerana', 261886719, 'Leo', 'unanswered'),
+    '36007644': ('Sabrina', 36007644, 'Ursa', 'unanswered'),
+    '156796392': ('Jenny', 156796392, 'Ursa', 'unanswered'),
+    '253504087': ('Jeremy', 253504087, 'Ursa', 'unanswered'),
+    '228914289': ('Jingjing', 228914289, 'Noctua', 'unanswered'),
+    '24978688': ('Koji', 24978688, 'Noctua', 'unanswered'),
+    '272794407': ('Rui Yuan', 272794407, 'Noctua', 'unanswered'),
+    '128731381': ('Joshua', 128731381, 'Aquila', 'unanswered'),
+    '20208755': ('Hwee Han', 20208755, 'Aquila', 'unanswered'),
+    '402870453': ('Madeline', 402870453, 'Aquila', 'unanswered'),
+    '238423509': ('Tanay', 238423509, 'Aquila', 'unanswered'),
+    '145540392': ('Kai Lin', 145540392, 'Draco', 'unanswered'),
+    '230268353': ('Sara', 230268353, 'Draco', 'unanswered'),
+    '104986701': ('Yi Quan', 104986701, 'Draco', 'unanswered'),
+    # Dev
+    '154906854': ('Zheng Wei', 154906854, 'Draco', 'unanswered')
+}
 
 # str id : (name, tele_id, house, state) where state can be any of the 4: ['leave','present', 'unanswered', 'absent']
 
 
-
+leave_file_path = '/home/zhengwei/tanzh/repos/rc4-ra-bot/RAs\' Leave Application Form.pdf'
 
 duty_filename = 'RA Duty and Leave Schedule_201819S1.xlsx'
 
