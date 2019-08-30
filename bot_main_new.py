@@ -1,6 +1,7 @@
 import time as ostime
 import telepot
 import random
+import pprint
 from telepot.loop import *
 from telepot.namedtuple import *
 from datetime import *
@@ -28,6 +29,9 @@ builtins.print = print_ucs2
 
 bot = telepot.Bot(ra_token)
 print(bot.getMe())
+
+initiate = duty_reminder.Duty_cal()
+initiate.start()
 
 #User polls stored in a dictionary. chat_id : [poll name]
 bot_mem = {}
@@ -73,7 +77,7 @@ def greetings(msg):
 
 def rollcall(msg, shift):
     content_type, chat_type, chat_id = telepot.glance(msg)
-    print(shift + ' check')
+    pprint.pprint(shift + ' check')
 
     arg = get_command_arg(msg)
     if arg == 'tmr':
@@ -95,10 +99,14 @@ def whosduty(msg):
     tomonth = datetime.today().strftime('%b')
     dutycal = initiate.get_cal()
     duty = dutycal[tomonth][todate]
-
+    print(dutycal)
     for shift in duty:
         name = duty[shift]
-        bot.sendMessage(chat_id, 'Hola mi amigo! {},\nYou have {} duty today ({})'.format(name, shift,todate))
+        if name:
+            bot.sendMessage(chat_id, 'Hola mi amigo! {},\nYou have {} duty today ({})'.format(name, shift, todate))
+        else:
+            bot.sendMessage(chat_id, 'No one has been scheduled to be on duty today ({})'.format(todate))
+
 def applyleave(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     file_path = leave_file_path
