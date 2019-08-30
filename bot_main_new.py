@@ -1,7 +1,6 @@
 import time as ostime
 import telepot
 import random
-import pprint
 from telepot.loop import *
 from telepot.namedtuple import *
 from datetime import *
@@ -77,7 +76,7 @@ def greetings(msg):
 
 def rollcall(msg, shift):
     content_type, chat_type, chat_id = telepot.glance(msg)
-    pprint.pprint(shift + ' check')
+    print(shift + ' check')
 
     arg = get_command_arg(msg)
     if arg == 'tmr':
@@ -99,7 +98,6 @@ def whosduty(msg):
     tomonth = datetime.today().strftime('%b')
     dutycal = initiate.get_cal()
     duty = dutycal[tomonth][todate]
-    print(dutycal)
     for shift in duty:
         name = duty[shift]
         if name:
