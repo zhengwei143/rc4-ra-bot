@@ -11,6 +11,11 @@ bot = telepot.Bot(dev_token)
 public_hol = [date(2018, 8, 9), date(2018, 8 , 22), date(2018, 11, 6),
               date(2018, 12, 25)]
 
+# Change every month
+current_year = '2019'
+current_month = 'Sep'
+current_schedule_file = 'ra-duty-leave-schedule-sept-2019.xlsx'
+
 class Duty_cal():
     def __init__(self, year=None, month=None, filename=None):
         self.year = year
@@ -41,27 +46,27 @@ class Duty_cal():
         # Initialization, creates new empty calendar and fill with duty list
         yes = ('y','Y')
         no = ('N','n')
-        while True:
-            print('Importing schedule to bot.\n Leave fields blank for default values.')
-            year = input('Enter the year (YYYY) [Default: Current Year]: ')
-            month = input('Enter the month to import (e.g. Aug): ') #assuming sheet name is abbreviated month
-            filename = input('Enter the filename: ') #Assume file in same directory as script
+        # while True:
+        #     print('Importing schedule to bot.\n Leave fields blank for default values.')
+        #     year = input('Enter the year (YYYY) [Default: Current Year]: ')
+        #     month = input('Enter the month to import (e.g. Aug): ') #assuming sheet name is abbreviated month
+        #     filename = input('Enter the filename: ') #Assume file in same directory as script
+        #
+        #     if not month:
+        #         month = datetime.today().strftime('%b')
+        #     if not filename:
+        #         filename = duty_filename
+        #     if not year:
+        #         year = datetime.today().year
+        #
+        #     print('Importing sheet ', month, 'from:\n',  filename)
+        #     check = input('Is the information correct? (Y/N):')
+        #     if check in yes:
+        #         break
 
-            if not month:
-                month = datetime.today().strftime('%b')
-            if not filename:
-                filename = duty_filename
-            if not year:
-                year = datetime.today().year
-
-            print('Importing sheet ', month, 'from:\n',  filename)
-            check = input('Is the information correct? (Y/N):')
-            if check in yes:
-                break
-
-        self.month = month
-        self.filename = filename
-        self.year = int(year)
+        self.month = current_month
+        self.filename = current_schedule_file
+        self.year = int(current_year)
 
         self.cal = self.empty_sem() #Generate empty calendar
         self.fill_cal() #Fill calendar
