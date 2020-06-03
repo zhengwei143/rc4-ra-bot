@@ -5,28 +5,7 @@ import csv
 ra_token = '609175111:AAHtto1acCS7T1kBMw_-aONeKrntnRgSW7k'
 dev_token = '418919776:AAFtP-yRuriRMPZp7jZp-MIkmfjv668nFGI'
 
-'''
-ra_list = {'Abdullah': (88985965, 'Ursa'), 'Anh': (215588173, 'Aquila'), 'Claudia': (297090900, 'Ursa'),
-           'David': (11549679, 'Leo'), 'Hafiz': (174955135, 'Noctua'), 'Jingjing': (228914289, 'Noctua'),
-           'Joshua': (128731381, 'Draco'), 'Kai Lin': (145540392, 'Draco'), 'Nabil': (97332271, 'Aquila'),
-           'Sabrina': (36007644, 'Ursa'), 'Sugiarto': (135474172, 'Aquila'), 'Wei Song': (130446496, 'Leo'),
-           'Yi Quan': (104986701, 'Draco'), 'Ying Tze': (114835155, 'Noctua'), 'Zicen': (139286512, 'Leo'),
-           'Brian': (209469386, 'Draco'),'Reuben': (111493999, 'Leo')
-           }
-'''
-'''
-ra_masterlist = {'88985965': ('Abdullah', 88985965, 'Ursa', 'unanswered'), '215588173': ('Anh', 215588173, 'Aquila','unanswered'),
-               '209469386': ('Brian', 209469386, 'Draco', 'unanswered'), '174955135': ('Hafiz', 174955135, 'Noctua','unanswered'),
-               '228914289': ('Jingjing', 228914289, 'Noctua','unanswered'), '128731381': ('Joshua',128731381, 'Draco','unanswered'),
-               '145540392': ('Kai Lin', 145540392, 'Draco','unanswered'), '97332271': ('Nabil',97332271, 'Aquila','unanswered'),
-               '36007644': ('Sabrina', 36007644, 'Ursa','unanswered'), '135474172': ('Sugiarto', 135474172, 'Aquila','unanswered'),
-               '130446496': ('Wei Song', 130446496, 'Leo','unanswered'),
-               '114835155': ('Ying Tze', 114835155, 'Noctua','unanswered'), '139286512': ('Zicen', 139286512, 'Leo','unanswered'),
-               '297090900': ('Claudia', 297090900, 'Ursa', 'unanswered'), '111493999': ('Reuben', 111493999, 'Leo','unanswered')
-               }
-'''
-
-# AY2019/20 RA List
+# AY2019/20 RA List - TODO: Modify with new personnel
 ra_masterlist = {
     '209469386': ('Brian', 209469386, 'Leo', 'unanswered'),
     '231696047': ('Gerald', 231696047, 'Leo', 'unanswered'),
@@ -51,10 +30,10 @@ ra_masterlist = {
 
 # str id : (name, tele_id, house, state) where state can be any of the 4: ['leave','present', 'unanswered', 'absent']
 
+# Duty roster - TODO: modify with new schedule
+duty_filename = 'RA Duty and Leave Schedule_201819S1.xlsx'
 
 leave_file_path = '/home/ubuntu/rc4-ra-bot/RAs\' Leave Application Form.pdf'
-
-duty_filename = 'RA Duty and Leave Schedule_201819S1.xlsx'
 
 admin_ra = ['Claduia','Anh','Ying Tze']
 
